@@ -1,4 +1,4 @@
-package fr.uga.l3miage.tp1.exo3.models;
+package fr.uga.l3miage.tp1.exo2.models;
 
 import javax.persistence.*;
 

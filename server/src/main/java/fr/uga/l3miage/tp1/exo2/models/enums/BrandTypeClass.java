@@ -1,4 +1,4 @@
-package fr.uga.l3miage.tp1.exo3.models.enums;
+package fr.uga.l3miage.tp1.exo2.models.enums;
 
 public class BrandTypeClass {
     public enum BrandType{

@@ -1,5 +1,7 @@
 package fr.uga.l3miage.tp1.exo2.models;
 
+import fr.uga.l3miage.tp1.exo2.models.enums.typeAccountClass;
+
 import javax.persistence.*;
 
 @Entity(name="NetflixAccountEntity")
@@ -12,7 +14,7 @@ public class netflixAccount {
     private Integer nbDevice;
     @Column(name="typeAccount")
     @Enumerated(EnumType.STRING)
-    private String typeAccount;
+    private typeAccountClass.TypeAccount typeAccount;
     @OneToOne
     private netflixUser user;
 

@@ -1,4 +1,6 @@
-package fr.uga.l3miage.tp1.exo3.models;
+package fr.uga.l3miage.tp1.exo2.models;
+
+import fr.uga.l3miage.tp1.exo2.models.enums.BrandTypeClass;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,8 +15,8 @@ public class brandMiage {
     private String siretNumber;
     @Column(name="BrandType")
     @Enumerated(EnumType.STRING)
-    private String type;
+    private BrandTypeClass.BrandType type;
 
     @OneToMany(mappedBy = "product")
-    private Set<brandMiage> brand;
+    private Set<productEntity> brand;
 }

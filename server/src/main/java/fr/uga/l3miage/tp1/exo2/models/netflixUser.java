@@ -1,5 +1,7 @@
 package fr.uga.l3miage.tp1.exo2.models;
 
+import fr.uga.l3miage.tp1.exo2.models.enums.sexClass;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -17,7 +19,7 @@ public class netflixUser {
     private String first_name;
     @Column(name="sex")
     @Enumerated(EnumType.STRING)
-    private String sex;
+    private sexClass.Sex sex;
     @Column(name="birthDate")
     private LocalDate birthDate;
     @OneToOne(mappedBy = "user")
