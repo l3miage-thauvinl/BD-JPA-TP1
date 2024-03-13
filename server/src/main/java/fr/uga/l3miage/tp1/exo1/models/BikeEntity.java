@@ -1,5 +1,8 @@
 package fr.uga.l3miage.tp1.exo1.models;
 
+import fr.uga.l3miage.tp1.exo1.enums.CylinderNumberClass;
+import fr.uga.l3miage.tp1.exo1.enums.ShifterTypeClass;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 @Entity
@@ -11,15 +14,15 @@ public class BikeEntity {
     @Column(name="capacity")
     private Integer capacity;
     @Column(name="CylinderNumber")
-    @Enumerated(EnumType.STRING)
-    private Integer cylinderNumber;
+    @Enumerated(EnumType.ORDINAL)
+    private CylinderNumberClass.CylinderNumber cylinderNumber;
     @Column(name="automatic")
     private boolean automatic;
     @Column(name="shifter")
     private boolean shifter;
     @Column(name="schifterType")
-    @Enumerated(EnumType.ORDINAL)
-    private String shifterType;
+    @Enumerated(EnumType.STRING)
+    private ShifterTypeClass.ShifterType shifterType;
     @Column(name="circulationDate")
     private LocalDate circulationDate;
 }
