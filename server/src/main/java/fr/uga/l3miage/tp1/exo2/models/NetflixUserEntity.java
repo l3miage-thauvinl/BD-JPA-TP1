@@ -5,9 +5,9 @@ import fr.uga.l3miage.tp1.exo2.models.enums.sexClass;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity(name="NetflixUserEntity")
+@Entity
 @Table(name="netfix_user")
-public class netflixUser {
+public class NetflixUserEntity {
     @Id
     @Column(name="id")
     private Integer id;
@@ -23,7 +23,7 @@ public class netflixUser {
     @Column(name="birthDate")
     private LocalDate birthDate;
     @OneToOne(mappedBy = "user")
-    private netflixAccount account;
+    private NetflixAccountEntity account;
 
 
 }

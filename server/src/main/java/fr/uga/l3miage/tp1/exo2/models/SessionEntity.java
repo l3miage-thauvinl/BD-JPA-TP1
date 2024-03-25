@@ -4,15 +4,11 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name="session")
-public class Session {
+public class SessionEntity {
     @Id
-    @Column(name="id_session")
     private UUID idSession;
-    @Column(name="last_command")
     private String lastCommand;
-    @Column(name="lock")
     private boolean lock;
-    @OneToOne(mappedBy ="session")
-    private User user;
+    @OneToOne
+    private UserEntity userEntity;
 }

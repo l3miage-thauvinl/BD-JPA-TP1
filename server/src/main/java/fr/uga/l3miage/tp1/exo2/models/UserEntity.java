@@ -5,17 +5,13 @@ import java.time.OffsetDateTime;
 
 @Entity
 @Table(name="user")
-public class User {
+public class UserEntity {
     @Id
-    @Column(name="idUser")
     private Long idUser;
-    @Column(name="sso")
     private boolean SSO;
-    @Column(name="last_connexion")
     private OffsetDateTime lastConnexion;
-
-    @OneToOne
-    private Session session;
+    @OneToOne(mappedBy = "session")
+    private SessionEntity session;
 
 
 
