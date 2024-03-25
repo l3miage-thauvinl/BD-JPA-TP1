@@ -1,12 +1,12 @@
 package fr.uga.l3miage.tp1.exo3.models;
 
-import org.h2.command.dml.Set;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="brand_miage")
-public class BrandMiage {
+public class BrandEntity {
     @Id
     @Column(name="compagny_name")
     private String compagnyName;
@@ -15,6 +15,6 @@ public class BrandMiage {
     @Column(name="type")
     @Enumerated(EnumType.STRING)
     private String type;
-    @OneToMany
-    private Set<BrandMiage> brands;
+    @OneToMany(mappedBy = "brand")
+    private Set<ProductEntity> products;
 }
